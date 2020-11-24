@@ -5,6 +5,8 @@
 //  Created by yosshi4486 on 2020/11/24.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 /// A type that can activate.
@@ -34,3 +36,5 @@ extension UITableView {
     }
 
 }
+
+#endif
