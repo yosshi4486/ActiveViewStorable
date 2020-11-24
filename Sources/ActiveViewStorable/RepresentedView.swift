@@ -5,6 +5,8 @@
 //  Created by yosshi4486 on 2020/11/24.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 /// A view should have a represented object in the properties.
@@ -17,3 +19,5 @@ public protocol RepresentedView: UIView {
     /// The object that this view is representing.
     var representedObject: RepresentedObject? { get set }
 }
+
+#endif
