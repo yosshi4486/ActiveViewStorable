@@ -53,8 +53,8 @@ extension ActiveViewStorable {
 
 extension ActiveViewStorable where Cell: RepresentedView {
 
-    /// Returns the representedObject of activeView.
-    var representedObjectOfActiveView: Cell.RepresentedObject? {
+    /// Returns the representedObject for activeView.
+    public var representedObjectForActiveView: Cell.RepresentedObject? {
 
         guard let cell = cellForActiveView else { return nil }
 
