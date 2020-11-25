@@ -17,7 +17,7 @@ public protocol ActiveViewStorable {
     associatedtype ActiveView: UIView
 
     /// The view that is firstResponder of current.
-    var activeView: ActiveView? { get }
+    var activeView: ActiveView? { get set }
 
     /// The tableView that can have activeView.
     var tableView: UITableView! { get set }
