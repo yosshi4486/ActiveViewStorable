@@ -5,7 +5,7 @@
 //  Created by yosshi4486 on 2020/11/24.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) || targetEnvironment(macCatalyst)
 
 import UIKit
 
@@ -53,8 +53,8 @@ extension ActiveViewStorable {
 
 extension ActiveViewStorable where Cell: RepresentedView {
 
-    /// Returns the representedObject of activeView.
-    var representedObjectOfActiveView: Cell.RepresentedObject? {
+    /// Returns the representedObject for activeView.
+    public var representedObjectForActiveView: Cell.RepresentedObject? {
 
         guard let cell = cellForActiveView else { return nil }
 
