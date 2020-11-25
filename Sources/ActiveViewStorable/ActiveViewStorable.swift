@@ -5,7 +5,7 @@
 //  Created by yosshi4486 on 2020/11/24.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) || targetEnvironment(macCatalyst)
 
 import UIKit
 
