@@ -26,13 +26,25 @@ extension UITableView {
 
         scrollToRow(at: indexPath, at: .bottom, animated: true)
 
-        let activatable = cellForRow(at: indexPath) as? Activatable
-        activatable?.activate()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+
+            let activatable = self.cellForRow(at: indexPath) as? Activatable
+            activatable?.activate()
+        }
     }
 
     public func deactivateCell(at indexPath: IndexPath) {
-        let activatable = cellForRow(at: indexPath) as? Activatable
-        activatable?.deactivate()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+
+            let activatable = self.cellForRow(at: indexPath) as? Activatable
+            activatable?.deactivate()
+        }
     }
 
 }
